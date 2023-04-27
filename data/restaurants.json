@@ -12,5 +12,12 @@
     "cuisine": "Indian",
     "website": "https://www.test1.com",
     "description": "Also really good"
+  },
+  {
+    "name": "Restaurant 3",
+    "address": "69 Cool dude street",
+    "cuisine": "African",
+    "website": "https://res3.com",
+    "description": "This one is a favourite!"
   }
 ]

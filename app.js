@@ -18,12 +18,20 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
-app.get("/restaurants", function (req, res) {
-  res.render("restaurants", { numberOfRestaurants: 2 });
-});
-
 app.get("/recommend", function (req, res) {
   res.render("recommend");
+});
+
+app.get("/restaurants", function (req, res) {
+  const filePath = path.join(__dirname, "data", "restaurants.json");
+
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  res.render("restaurants", {
+    numberOfRestaurants: storedRestaurants.length,
+    restaurants: storedRestaurants,
+  });
 });
 
 app.post("/recommend", function (req, res) {
