@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Jolly",
+    "address": "47 AK Street",
+    "cuisine": "Italian",
+    "website": "https://www.example.com",
+    "description": "Kinda slaps"
+  },
+  {
+    "name": "Test 1",
+    "address": "Test 1 Lane",
+    "cuisine": "Indian",
+    "website": "https://www.test1.com",
+    "description": "Also really good"
+  }
+]

@@ -1,0 +1,51 @@
+const path = require("path");
+const fs = require("fs");
+
+const express = require("express");
+
+const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+
+//Middleware to deliver static files in this case CSS and JavaScript
+app.use(express.static("public"));
+
+//Middleware to read form data
+app.use(express.urlencoded({ extended: false }));
+
+app.get("/", function (req, res) {
+  res.render("index");
+});
+
+app.get("/restaurants", function (req, res) {
+  res.render("restaurants", { numberOfRestaurants: 2 });
+});
+
+app.get("/recommend", function (req, res) {
+  res.render("recommend");
+});
+
+app.post("/recommend", function (req, res) {
+  const restaurant = req.body;
+  const filePath = path.join(__dirname, "data", "restaurants.json");
+
+  const fileData = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(fileData);
+
+  storedRestaurants.push(restaurant);
+
+  fs.writeFileSync(filePath, JSON.stringify(storedRestaurants));
+
+  res.redirect("/confirm");
+});
+
+app.get("/confirm", function (req, res) {
+  res.render("confirm");
+});
+
+app.get("/about", function (req, res) {
+  res.render("about");
+});
+
+app.listen(3000);
