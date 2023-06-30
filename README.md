@@ -20,12 +20,17 @@ Any new restaurants are added to the **data** folder and loaded into the **Brows
 
 ![image](https://github.com/originalsk01/restaurants-node-website/assets/46004600/140ce158-8423-4be6-a3d7-a65a28fbb359)
 
-### Browse Restaurants (with loaded content)
+### Browse and Order switching
 
-![image](https://github.com/originalsk01/restaurants-node-website/assets/46004600/d344085e-8ba3-4d4f-b2ad-734a358a00c0)
+![Animation 53 - 54](https://github.com/originalsk01/restaurants-node-website/assets/46004600/f7f01384-8b73-4472-9b21-87330f69532e)
 
-### Share Restaurant Page
+### Adding a new Restaurant
 
-![image](https://github.com/originalsk01/restaurants-node-website/assets/46004600/d015a4b2-54a0-4826-b018-e5b44e2f4aa1)
+![Animation 50 - 51](https://github.com/originalsk01/restaurants-node-website/assets/46004600/689318d8-fd09-4f23-9c75-6707f96df93a)
+
+### Not found Page
+
+![image](https://github.com/originalsk01/restaurants-node-website/assets/46004600/0e894a03-8fd2-4573-8414-ba525393b8be)
+
 
 
